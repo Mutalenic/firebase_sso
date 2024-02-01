@@ -1,0 +1,159 @@
+[debug] [2024-02-01T08:41:36.340Z] ----------------------------------------------------------------------
+[debug] [2024-02-01T08:41:36.342Z] Command:       /usr/local/share/nvm/versions/node/v20.11.0/bin/node /home/codespace/nvm/current/bin/firebase init
+[debug] [2024-02-01T08:41:36.343Z] CLI Version:   13.1.0
+[debug] [2024-02-01T08:41:36.343Z] Platform:      linux
+[debug] [2024-02-01T08:41:36.343Z] Node Version:  v20.11.0
+[debug] [2024-02-01T08:41:36.343Z] Time:          Thu Feb 01 2024 08:41:36 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-02-01T08:41:36.343Z] Env Overrides: GITHUB_API_URL
+[debug] [2024-02-01T08:41:36.343Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-01T08:41:36.348Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-01T08:41:36.348Z] > authorizing via signed-in user (nicomutale@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspaces/firebase_sso
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-02-01T08:41:44.053Z] > refreshing access token with scopes: []
+[debug] [2024-02-01T08:41:44.055Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-02-01T08:41:44.055Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-01T08:41:44.284Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-02-01T08:41:44.284Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-01T08:41:44.320Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-02-01T08:41:45.825Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-02-01T08:41:45.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project fir-sso-ee903 (firebase-sso) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-02-01T08:41:47.637Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-02-01T08:41:47.637Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/fir-sso-ee903
+[debug] [2024-02-01T08:41:49.443Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firebasedatabase.googleapis.com 200
+[debug] [2024-02-01T08:41:49.443Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-02-01T08:41:49.444Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/fir-sso-ee903/locations/-/instances/fir-sso-ee903-default-rtdb [none]
+[debug] [2024-02-01T08:41:51.225Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/fir-sso-ee903/locations/-/instances/fir-sso-ee903-default-rtdb 200
+[debug] [2024-02-01T08:41:51.225Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/fir-sso-ee903/locations/-/instances/fir-sso-ee903-default-rtdb {"name":"projects/72031629652/locations/us-central1/instances/fir-sso-ee903-default-rtdb","project":"projects/72031629652","databaseUrl":"https://fir-sso-ee903-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-02-01T08:42:06.238Z] >>> [apiv2][query] GET https://fir-sso-ee903-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-02-01T08:42:07.079Z] <<< [apiv2][status] GET https://fir-sso-ee903-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-02-01T08:42:07.079Z] <<< [apiv2][body] GET https://fir-sso-ee903-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] ✔  Database Rules for fir-sso-ee903-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-02-01T08:42:07.082Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firestore.googleapis.com [none]
+[debug] [2024-02-01T08:42:07.082Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firestore.googleapis.com x-goog-quota-user=projects/fir-sso-ee903
+[debug] [2024-02-01T08:42:08.825Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firestore.googleapis.com 200
+[debug] [2024-02-01T08:42:08.825Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/firestore.googleapis.com [omitted]
+[debug] [2024-02-01T08:42:08.826Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default) [none]
+[debug] [2024-02-01T08:42:10.543Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default) 200
+[debug] [2024-02-01T08:42:10.543Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default) {"name":"projects/fir-sso-ee903/databases/(default)","uid":"9a420290-3272-4dc4-b5c9-d010e3c1a614","createTime":"2024-01-31T14:17:08.115245Z","updateTime":"2024-01-31T14:17:08.115245Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-02-01T07:42:10.430239Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IOvUmMXfiYQDMMjG4+jsh4QD"}
+[debug] [2024-02-01T08:42:10.543Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-02-01T08:42:10.543Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-01T08:42:10.543Z] > authorizing via signed-in user (nicomutale@gmail.com)
+[debug] [2024-02-01T08:42:10.543Z] [iam] checking project fir-sso-ee903 for permissions ["firebase.projects.get"]
+[debug] [2024-02-01T08:42:10.544Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions [none]
+[debug] [2024-02-01T08:42:10.544Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions x-goog-quota-user=projects/fir-sso-ee903
+[debug] [2024-02-01T08:42:10.544Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-01T08:42:12.005Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions 200
+[debug] [2024-02-01T08:42:12.006Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-02-01T08:42:21.027Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/fir-sso-ee903/releases pageSize=10&pageToken=
+[debug] [2024-02-01T08:42:22.565Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/fir-sso-ee903/releases 200
+[debug] [2024-02-01T08:42:22.565Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/fir-sso-ee903/releases {"releases":[{"name":"projects/fir-sso-ee903/releases/cloud.firestore","rulesetName":"projects/fir-sso-ee903/rulesets/2c281470-c830-4dce-a0ea-fe07c7f20226","createTime":"2024-01-31T14:17:14.225681Z","updateTime":"2024-01-31T14:17:14.225681Z"}]}
+[debug] [2024-02-01T08:42:22.566Z] Found ruleset: projects/fir-sso-ee903/rulesets/2c281470-c830-4dce-a0ea-fe07c7f20226
+[debug] [2024-02-01T08:42:22.566Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/fir-sso-ee903/rulesets/2c281470-c830-4dce-a0ea-fe07c7f20226 [none]
+[debug] [2024-02-01T08:42:23.924Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/fir-sso-ee903/rulesets/2c281470-c830-4dce-a0ea-fe07c7f20226 200
+[debug] [2024-02-01T08:42:23.924Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/fir-sso-ee903/rulesets/2c281470-c830-4dce-a0ea-fe07c7f20226 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-02-01T08:42:30.967Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-02-01T08:42:30.978Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-02-01T08:42:31.392Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-02-01T08:42:31.392Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-02-01T08:42:32.648Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-02-01T08:42:32.649Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/fir-sso-ee903/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/fir-sso-ee903/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-02-01T08:42:32.656Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-01T08:42:32.656Z] > authorizing via signed-in user (nicomutale@gmail.com)
+[debug] [2024-02-01T08:42:32.656Z] [iam] checking project fir-sso-ee903 for permissions ["firebase.projects.get"]
+[debug] [2024-02-01T08:42:32.656Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions [none]
+[debug] [2024-02-01T08:42:32.656Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions x-goog-quota-user=projects/fir-sso-ee903
+[debug] [2024-02-01T08:42:32.656Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-01T08:42:34.058Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions 200
+[debug] [2024-02-01T08:42:34.058Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-sso-ee903:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-01T08:42:34.058Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-02-01T08:42:34.058Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/fir-sso-ee903
+[debug] [2024-02-01T08:42:34.061Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-02-01T08:42:34.061Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/fir-sso-ee903
+[debug] [2024-02-01T08:42:35.787Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/runtimeconfig.googleapis.com 200
+[debug] [2024-02-01T08:42:35.792Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-02-01T08:42:35.797Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/cloudfunctions.googleapis.com 200
+[debug] [2024-02-01T08:42:35.797Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-sso-ee903/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-02-01T08:43:03.727Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-sso-ee903 [none]
+[debug] [2024-02-01T08:43:04.121Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-sso-ee903 200
+[debug] [2024-02-01T08:43:04.121Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-sso-ee903 {"projectId":"fir-sso-ee903","projectNumber":"72031629652","displayName":"firebase-sso","name":"projects/fir-sso-ee903","resources":{"hostingSite":"fir-sso-ee903","realtimeDatabaseInstance":"fir-sso-ee903-default-rtdb"},"state":"ACTIVE","etag":"1_3b23ad4c-6327-4860-8177-db5745788627"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-02-01T08:43:25.124Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-02-01T08:43:25.208Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-02-01T08:43:25.208Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.7.2","browserURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.tgz"},"live":{"version":"10.7","browserURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.7.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.7.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.7.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.7.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at /workspaces/firebase_sso 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=887125510&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
